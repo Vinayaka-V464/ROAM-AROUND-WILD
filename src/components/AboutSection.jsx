@@ -87,8 +87,8 @@ const AboutSection = () => {
                     }}>
                         {[
                             { icon: '🌿', title: 'Eco Friendly', desc: '100% Nature friendly practices' },
-                            { icon: '🛡️', title: 'Safe Travel', desc: 'Certified guides & equipment' },
-                            { icon: '⛺', title: 'Cozy Stays', desc: 'Handpicked local homestays' },
+                            { icon: '🛡️', title: 'Safe Travel', desc: 'Safe guides & equipment' },
+                            { icon: '⛺', title: 'Cozy Stays', desc: 'Handpicked local stays' },
                             { icon: '🥘', title: 'Local Food', desc: 'Authentic regional cuisine' }
                         ].map((feature, idx) => (
                             <div key={idx}>

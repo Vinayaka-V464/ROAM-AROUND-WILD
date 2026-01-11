@@ -2,20 +2,20 @@ import React from 'react';
 
 const reviews = [
     {
-        name: 'Sasha',
-        text: "We booked our honeymoon with RΛW and it was simply incredible. They took care of everything, even our packing list!"
+        name: 'Palavi',
+        text: "Soo elegant, soo beautiful, just looking like a wowww ! TBH, it was an awesome experience And the best part was Trek with them. Thanks for all the love n care with great smiles I'd love to join you guys to celebrate New year with my friends. Thankeww!!"
     },
     {
-        name: 'Manju',
-        text: "Planned a trek to Gokarna beach, we got the best guide arranged for the trip. We would like to plan again. Thanks for the hospitality."
+        name: 'Naveen Reddy',
+        text: "Best family vacation in Gokarna. We return every year for my daughter’s birthday. Cozy stay, amazing hosts, great food, treks, and camping, all perfectly organized. Thank you RAW!"
     },
     {
-        name: 'Tani',
-        text: "It was my first beach trip; the team helped me from transport to stay to local food. Had the best time."
+        name: 'Mehga',
+        text: "RAW planned a perfect 2N trip for our group of 16 students on our first visit to Gokarna. Amazing experience will travel again with RAW for sure!"
     },
     {
-        name: 'Mandar',
-        text: "Plan your perfect gateway from reality call the boys for all your trips in South. Beach to rocks to mountains."
+        name: 'Abhi Ram',
+        text: "We traveled by bike from Bengaluru, and from Day 1 the RAW team supported us with peaceful and scenic route suggestions. The riverfront stay was perfect !! A true biker’s paradise with safe parking. RAW hosted us for water adventures, treks, and great food, and we also learned a lot about rock formations and marine life. Highly recommended, and a huge thanks to the RAW team!"
     }
 ];
 
@@ -24,7 +24,7 @@ const Testimonials = () => {
         <section id="reviews" style={{ padding: '8rem 0', backgroundColor: 'var(--color-cream)' }}>
             <div className="container">
                 <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
-                     <div style={{
+                    <div style={{
                         display: 'inline-block',
                         backgroundColor: 'var(--color-sage)',
                         color: 'var(--color-forest)',
@@ -59,15 +59,15 @@ const Testimonials = () => {
                     justifyContent: 'center',
                     gap: '2rem'
                 }}>
-                   {/* Fallback to flex/grid for better response without media queries in inline styles */}
-                   <style>
-                       {`
+                    {/* Fallback to flex/grid for better response without media queries in inline styles */}
+                    <style>
+                        {`
                          @media (min-width: 768px) {
                            .masonry-grid { display: grid; grid-template-columns: 1fr 1fr; }
                          }
                        `}
-                   </style>
-                   <div className="masonry-grid" style={{ display: 'grid', gap: '2rem', width: '100%' }}>
+                    </style>
+                    <div className="masonry-grid" style={{ display: 'grid', gap: '2rem', width: '100%' }}>
                         {reviews.map((review, index) => (
                             <div key={index} style={{
                                 backgroundColor: 'var(--color-white)',
@@ -94,7 +94,7 @@ const Testimonials = () => {
                                     {review.text}
                                 </p>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                    <div style={{ width: '40px', height: '40px', backgroundColor: '#ddd', borderRadius: '50%' }}></div>
+
                                     <h4 style={{
                                         fontFamily: 'var(--font-heading)',
                                         color: 'var(--color-forest)',
@@ -105,7 +105,7 @@ const Testimonials = () => {
                                 </div>
                             </div>
                         ))}
-                   </div>
+                    </div>
                 </div>
             </div>
         </section>

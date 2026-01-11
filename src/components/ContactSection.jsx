@@ -53,7 +53,7 @@ const ContactSection = () => {
                     }}>
                         <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📧</div>
                         <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--color-forest)' }}>Email Us</h3>
-                        <p style={{ fontSize: '1.2rem', fontWeight: '700', color: 'var(--color-orange)' }}>gautamk.raw@gmail.com</p>
+                        <p style={{ fontSize: '1.2rem', fontWeight: '700', color: 'var(--color-orange)' }}>roamaroundwild2@gmail.com</p>
                     </div>
                 </div>
 

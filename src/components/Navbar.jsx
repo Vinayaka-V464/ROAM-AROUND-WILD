@@ -31,9 +31,9 @@ const Navbar = () => {
                 zIndex: 1000,
                 padding: '1rem 0',
                 transition: 'all 0.3s ease',
-                backgroundColor: scrolled || isMenuOpen ? 'rgba(241, 248, 231, 0.95)' : 'transparent',
-                backdropFilter: scrolled || isMenuOpen ? 'blur(10px)' : 'none',
-                borderBottom: scrolled || isMenuOpen ? '1px solid rgba(28, 68, 37, 0.1)' : 'none'
+                backgroundColor: scrolled || isMenuOpen ? 'rgba(241, 248, 231, 0.95)' : 'rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(10px)',
+                borderBottom: scrolled || isMenuOpen ? '1px solid rgba(28, 68, 37, 0.1)' : '1px solid rgba(255, 255, 255, 0.1)'
             }}
         >
             <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>

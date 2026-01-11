@@ -36,7 +36,7 @@ const NatureSection = () => {
 
                     {/* Geological Wonders */}
                     <div className="fade-in-up delay-200">
-                        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🪨</div>
+                        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>⛰️</div>
                         <h3 style={{ fontSize: '2rem', marginBottom: '1rem', color: 'var(--color-forest)' }}>
                             Geological Wonders
                         </h3>
@@ -68,6 +68,7 @@ const NatureSection = () => {
                             <li>Fiery coastal sunsets</li>
                             <li>Moonlit beaches</li>
                             <li>Star-filled skies away from city lights</li>
+                            <li>BIOLUMINESCENCE in low light beaches</li>
                         </ul>
                     </div>
                 </div>

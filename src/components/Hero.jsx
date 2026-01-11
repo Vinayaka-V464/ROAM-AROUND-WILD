@@ -59,10 +59,12 @@ const Hero = () => {
                 <h1 style={{
                     fontSize: 'clamp(3rem, 7vw, 6rem)',
                     color: 'var(--color-forest)',
-                    textShadow: '3px 3px 0px var(--color-white)',
+                    textShadow: '3px 3px 0px rgba(255,255,255,0.5)',
                     marginBottom: '1.5rem',
                     lineHeight: '0.95',
-                    letterSpacing: '-0.02em'
+                    letterSpacing: '-0.02em',
+                    WebkitTextStroke: '1px rgba(255,255,255,0.8)',
+                    paintOrder: 'stroke fill'
                 }}>
                     Explore Gokarna <br />
                     <span style={{ color: 'var(--color-orange)' }}>The Wild Way</span>

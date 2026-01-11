@@ -28,7 +28,8 @@ const experiences = [
             'Cliffside and jungle trails hikes',
             'Night treks under the stars',
             'Local storytelling & geography insights',
-            'Panoramic view spots'
+            'Panoramic view spots',
+            'BIOLUMINESCENCE (seasonal weather)'
         ],
         tags: 'Nature lovers • Hikers • Photographers',
         img: exp2,
