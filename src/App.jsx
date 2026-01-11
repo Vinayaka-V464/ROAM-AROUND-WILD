@@ -8,6 +8,8 @@ import Testimonials from './components/Testimonials'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
 
+import FloatingSocials from './components/FloatingSocials'
+
 function App() {
   return (
     <div className="App">
@@ -20,6 +22,7 @@ function App() {
       <Testimonials />
       <ContactSection />
       <Footer />
+      <FloatingSocials />
     </div>
   )
 }

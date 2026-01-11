@@ -1,6 +1,5 @@
 import React from 'react';
-import whatsappLogo from '../assets/whatsapp-logo.png';
-import instagramLogo from '../assets/instagram-logo.png';
+
 
 const Footer = () => {
     return (
@@ -78,16 +77,7 @@ const Footer = () => {
                     opacity: 0.9
                 }}>
                     <p style={{ opacity: 0.7 }}>&copy; 2026 Roam Around Wild. All rights reserved.</p>
-                    <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-                        {/* WhatsApp Icon */}
-                        <a href="https://wa.me/919880564526" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                            <img src={whatsappLogo} alt="WhatsApp" style={{ width: '40px', height: '40px', transition: 'transform 0.3s ease' }} />
-                        </a>
-                        {/* Instagram Icon */}
-                        <a href="https://instagram.com/roamaroundwild" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                            <img src={instagramLogo} alt="Instagram" style={{ width: '40px', height: '40px', transition: 'transform 0.3s ease' }} />
-                        </a>
-                    </div>
+
                 </div>
             </div>
         </footer>
