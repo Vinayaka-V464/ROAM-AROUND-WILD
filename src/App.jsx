@@ -1,29 +1,24 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import AboutSection from './components/AboutSection'
-import Experiences from './components/Experiences'
-import NatureSection from './components/NatureSection'
-import WhyRaw from './components/WhyRaw'
-import Testimonials from './components/Testimonials'
-import ContactSection from './components/ContactSection'
-import Footer from './components/Footer'
-
+import Gallery from './components/Gallery'
 import FloatingSocials from './components/FloatingSocials'
+import Home from './pages/Home'
+import ScrollToTop from './components/ScrollToTop' // Helper for scroll reset
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <AboutSection />
-      <Experiences />
-      <NatureSection />
-      <WhyRaw />
-      <Testimonials />
-      <ContactSection />
-      <Footer />
-      <FloatingSocials />
-    </div>
+    <Router>
+      <div className="App">
+        {/* Helper to scroll to top on route change */}
+        <ScrollToTop />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/gallery" element={<Gallery />} />
+        </Routes>
+        <FloatingSocials />
+      </div>
+    </Router>
   )
 }
 

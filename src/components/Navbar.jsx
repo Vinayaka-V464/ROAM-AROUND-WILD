@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.jpg';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -12,6 +14,18 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    // Scroll to hash if present (basic handling for cross-page hash navigation)
+    useEffect(() => {
+        if (location.hash) {
+            const element = document.getElementById(location.hash.substring(1));
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        }
+    }, [location]);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -38,7 +52,7 @@ const Navbar = () => {
         >
             <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 {/* Logo */}
-                <a href="#" style={{
+                <Link to="/" style={{
                     fontFamily: 'var(--font-heading)',
                     fontSize: '1.5rem',
                     color: 'var(--color-forest)',
@@ -60,13 +74,14 @@ const Navbar = () => {
                         }}
                     />
                     ROAM AROUND WILD
-                </a>
+                </Link>
 
                 {/* Desktop Menu */}
                 <div className="desktop-only" style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-                    <a href="#about" style={{ fontWeight: 500, color: 'var(--color-forest)' }}>About</a>
-                    <a href="#experiences" style={{ fontWeight: 500, color: 'var(--color-forest)' }}>Trips</a>
-                    <a href="#reviews" style={{ fontWeight: 500, color: 'var(--color-forest)' }}>Reviews</a>
+                    <Link to="/#about" style={{ fontWeight: 500, color: 'var(--color-forest)' }}>About</Link>
+                    <Link to="/#experiences" style={{ fontWeight: 500, color: 'var(--color-forest)' }}>Trips</Link>
+                    <Link to="/gallery" style={{ fontWeight: 500, color: 'var(--color-forest)' }}>Gallery</Link>
+                    <Link to="/#reviews" style={{ fontWeight: 500, color: 'var(--color-forest)' }}>Reviews</Link>
 
                     <a href="https://wa.me/919880564526" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ textDecoration: 'none' }}>
                         Plan Your Trip
@@ -125,10 +140,11 @@ const Navbar = () => {
                         height: '100vh',
                         paddingTop: '80px' // Offset for sticky header
                     }}>
-                        <a href="#about" onClick={closeMenu} style={{ fontWeight: 700, fontSize: '1.5rem', color: 'var(--color-forest)' }}>About</a>
-                        <a href="#experiences" onClick={closeMenu} style={{ fontWeight: 700, fontSize: '1.5rem', color: 'var(--color-forest)' }}>Trips</a>
-                        <a href="#reviews" onClick={closeMenu} style={{ fontWeight: 700, fontSize: '1.5rem', color: 'var(--color-forest)' }}>Reviews</a>
-                        <a href="#contact" onClick={closeMenu} style={{ fontWeight: 700, fontSize: '1.5rem', color: 'var(--color-forest)' }}>Contact</a>
+                        <Link to="/#about" onClick={closeMenu} style={{ fontWeight: 700, fontSize: '1.5rem', color: 'var(--color-forest)' }}>About</Link>
+                        <Link to="/#experiences" onClick={closeMenu} style={{ fontWeight: 700, fontSize: '1.5rem', color: 'var(--color-forest)' }}>Trips</Link>
+                        <Link to="/gallery" onClick={closeMenu} style={{ fontWeight: 700, fontSize: '1.5rem', color: 'var(--color-forest)' }}>Gallery</Link>
+                        <Link to="/#reviews" onClick={closeMenu} style={{ fontWeight: 700, fontSize: '1.5rem', color: 'var(--color-forest)' }}>Reviews</Link>
+                        <Link to="/#contact" onClick={closeMenu} style={{ fontWeight: 700, fontSize: '1.5rem', color: 'var(--color-forest)' }}>Contact</Link>
 
                         <a href="https://wa.me/919880564526" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ textDecoration: 'none', fontSize: '1.2rem', padding: '1rem 2rem' }}>
                             Plan Your Trip
