@@ -2,7 +2,7 @@ import React from 'react';
 import MediaItem from './MediaItem';
 
 // Auto-import all images/videos from the visual-stories folder
-const mediaModules = import.meta.glob('../assets/visual-stories/*.{png,jpg,jpeg,svg,mp4,webm,heic}', { eager: true });
+const mediaModules = import.meta.glob('../assets/visual-stories/*.{png,jpg,jpeg,svg,mp4,webm,heic,PNG,JPG,JPEG,SVG,MP4,WEBM,HEIC}', { eager: true });
 
 // Convert module object to array of URLs
 const mediaItems = Object.values(mediaModules).map((module) => module.default);
