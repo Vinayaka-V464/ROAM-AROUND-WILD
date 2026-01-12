@@ -40,7 +40,7 @@ const LiveFeed = () => {
                     {marqueeItems.map((item, index) => (
                         <div key={`marquee-${index}`} style={{
                             width: '250px',
-                            height: '350px',
+                            height: '450px',
                             flexShrink: 0,
                             borderRadius: '1.5rem',
                             overflow: 'hidden',

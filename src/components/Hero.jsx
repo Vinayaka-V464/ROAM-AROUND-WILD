@@ -1,4 +1,5 @@
 import React from 'react';
+import heroBg from '../assets/hero-bg.jpg';
 
 const Hero = () => {
     return (
@@ -21,7 +22,7 @@ const Hero = () => {
                 height: '100%',
                 zIndex: -1,
                 backgroundColor: 'var(--color-cream)',
-                backgroundImage: 'url("https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")',
+                backgroundImage: `url(${heroBg})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}>
