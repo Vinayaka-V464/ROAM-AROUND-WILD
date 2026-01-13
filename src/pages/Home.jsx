@@ -7,6 +7,7 @@ import WhyRaw from '../components/WhyRaw'
 import Testimonials from '../components/Testimonials'
 import ContactSection from '../components/ContactSection'
 import LiveFeed from '../components/LiveFeed'
+import TeamSection from '../components/TeamSection'
 import Footer from '../components/Footer'
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
             <section id="reviews">
                 <Testimonials />
             </section>
+            <TeamSection />
             <LiveFeed />
             <section id="contact">
                 <ContactSection />
